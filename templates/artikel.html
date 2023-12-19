@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pendaftaran</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+  <!-- Bootstrap JS dan jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="container-utama">
+    <nav class="navbar navbar-expand-md navbar-light bg-aqua fixed-top">
+      <a class="navbar-brand mt-md-1" href="#"><img src="/static/AssetsMSIB/logo2.png" width="30" /> SMP PUTRI DARUT
+        TAUHID BANGIL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pendaftaran">Pendaftaran</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/status_pendaftaran">Status Pendaftaran</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/kontak">Kontak Kami</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile"><img src="/static/AssetsMSIB/icon_profile.jpg" width="30"
+                class="rounded-circle" /></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="/static/AssetsMSIB/icon_profile.jpg" width="30" class="rounded-circle">
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a href="/" class="dropdown-item">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Artikel-->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">MEMPERINGATI HARI GURU</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4"> Hari Guru telah tiba, sebuah waktu di mana kita merayakan sosok-sosok yang tak pernah
+          lelah
+          memberikan cahaya dalam kegelapan, membimbing langkah-langkah kita menuju masa depan yang cerah. Di SMP Putri
+          Darut Tauhid Bangil, Hari Guru bukan hanya sekadar tanggal dalam kalender, melainkan momen penting yang
+          menggugah perasaan terima kasih dan penghargaan dari hati para siswa kepada para pahlawan tanpa tanda jasa:
+          para guru.
+          Tahun ini, semangat untuk menghormati para guru tidak pernah pudar. Dari persiapan hingga pelaksanaan, terasa
+          begitu mengharukan dan penuh kebersamaan. Siswa-siswi dengan antusiasme yang meluap-luap terlibat dalam
+          berbagai kegiatan, menunjukkan betapa pentingnya peran para guru dalam kehidupan mereka.
+          Berbagai karya seni yang dipenuhi cinta dan apresiasi tersebar di setiap sudut sekolah. Dari lukisan, puisi,
+          hingga kartu ucapan, tiap karya itu adalah ungkapan terima kasih yang tak terukur bagi para pendidik yang
+          telah bersusah payah mengajar dan membimbing.</p>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+          <img src="/static/img/HariGuru.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+            width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <!-- kontak -->
+    <div class="container-contact">
+      <div class="informasi mt-5">
+        <div class="row">
+          <div class="d-flex flex-column position">
+            <img src="/static/AssetsMSIB/logo2.png" width="70" />
+            <p>SMP Putri Darut Tauhid Bangil</p>
+            <div class="ml-center">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column position">
+            <h5>Kontak Kami</h5>
+            <p>smpdaruttauhidbangil@gmail.com</p>
+            <p>+628572139901</p>
+            <p>
+              Jl. Layur No.55, Gempeng, Kec. Bangil, Pasuruan, Jawa Timur
+              67153
+            </p>
+          </div>
+          <div class="d-flex flex-column position">
+            <h5>Lokasi Kami</h5>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.774705508052!2d112.78817531038237!3d-7.599480575073479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7db74c04a8805%3A0xee10f21ed0907f41!2sSmp%20putri%20darut%20tauhid%20bangil!5e0!3m2!1sid!2sid!4v1702214351558!5m2!1sid!2sid"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body d-flex justify-content-between">
+          <h6 class="card-title">
+            @SMPPUTRIDARUTAUHIDBANGIL.all right reserved
+          </h6>
+          <h6 class="card-title">privacy & policy</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMP PUTRI DARUT TAUHID BANGIL</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae360af17e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/css/styleadmin.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function konfirmasiHapus(entryId) {
+        // Tampilkan konfirmasi pop-up
+        var konfirmasi = confirm("Apakah Anda yakin ingin menghapus data?");
+
+        // Jika pengguna menekan OK, arahkan untuk menghapus data
+        if (konfirmasi) {
+          window.location.href = "/hapus/" + entryId;
+        }
+      }
+
+      function logout() {
+        Swal.fire({
+          title: "Apakah anda yakin keluar?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#558CA1",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Ya, Keluar!",
+          cancelButtonText: "Batal",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Menghapus cookie
+            fetch("/logout").then((res) => {
+              Swal.fire("Signed out!", "Anda telah keluar.", "success").then(
+                () => {
+                  // Redirect ke halaman login atau halaman lain yang sesuai
+                  window.location.href = "/"; // Ganti dengan lokasi yang sesuai
+                }
+              );
+            });
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar" class="js-sidebar">
+        <div class="h-100">
+          <div class="sidebar-logo">
+            <a href="/admin">SMP PUTRI DARUT TAUDHI BANGIL</a>
+          </div>
+          <ul class="sidebar-nav">
+            <li class="sidebar-header">Menu</li>
+            <li class="sidebar-item">
+              <a href="/admin" class="sidebar-link">
+                <i class="fa-solid fa-list pe-2"></i> Dashboard
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="main">
+        <nav class="navbar navbar-expand px-3 border-bottom">
+          <button class="btn" id="sidebar-toggle" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                  <img
+                    src="/static/img/dow.png"
+                    class="avatar img-fluid rounded"
+                    alt=""
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a href="/profile_admin" class="dropdown-item">Profile</a>
+                  <button class="dropdown-item" onclick="logout()">
+                    Logout
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main class="content px-3 py-2">
+          <div class="container-fluid">
+            <div class="mb-3">
+              <h4>Admin Dashboard</h4>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 d-flex">
+                <div class="card flex-fill border-0 illustration">
+                  <div class="card-body p-0 d-flex flex-fill">
+                    <div class="row g-0 w-100">
+                      <div class="col-6">
+                        <div class="p-3 m-1">
+                          <h4>Welcome Back, Admin</h4>
+                          <p class="mb-0">
+                            Admin Dashboard, SMP PUTRI DARUT TAUHID BANGIL
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-6 align-self-end text-end">
+                        <img
+                          src="/static/img/ti.png"
+                          class="img-fluid illustration-img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid">
+                <!-- Table Element -->
+                <div class="card border-0">
+                  <div class="card-header">
+                    <h5 class="card-title">Daftar calon siswa</h5>
+                    <h6 class="card-subtitle text-muted">
+                      Pastikan data peserta sudah lengkap!!
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Nama</th>
+                          <th scope="col">Asal Sekolah</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Ijazah</th>
+                          <th scope="col">Kartu Keluarga</th>
+                          <th scope="col">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for entry in data %}
+                        <tr>
+                          <th scope="row">{{ loop.index }}</th>
+                          <td>{{ entry.nama }}</td>
+                          <td>{{ entry.asal }}</td>
+                          <td>{{ entry.status }}</td>
+                          <td>
+                            <a href="{{ entry.ijazah }}" target="_blank">
+                              <img
+                                src="{{ entry.ijazah }}"
+                                alt="Ijazah {{ entry.nama }}"
+                                style="max-width: 100px; max-height: 100px"
+                              />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="{{ entry.kk }}" target="_blank">
+                              <img
+                                src="{{ entry.kk }}"
+                                alt="Kartu Keluarga {{ entry.nama }}"
+                                style="max-width: 100px; max-height: 100px"
+                              />
+                            </a>
+                          </td>
+                          <!-- Tambahkan tombol delete dengan atribut onclick -->
+                          <td>
+                            <button
+                              class="btn btn-danger"
+                              onclick="konfirmasiHapus('{{ entry._id }}')"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <a href="#" class="theme-toggle">
+          <i class="fa-regular fa-moon"></i>
+          <i class="fa-regular fa-sun"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

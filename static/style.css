@@ -1,0 +1,455 @@
+/* Custom CSS untuk navbar */
+.navbar {
+  justify-content: space-between;
+}
+.navbar-brand {
+  margin-right: aut;
+}
+@media (max-width: 768px) {
+  /* Untuk tampilan mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-brand {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Menggunakan Flexbox untuk pusatkan vertikal */
+}
+
+.navbar-brand img {
+  margin-right: 10px; /* Menambahkan ruang antara logo dan teks */
+}
+
+
+/* Warna latar belakang aqua */
+.bg-aqua {
+  background-color: #6495ED !important;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Should be removed. Only for demonstration */
+    background-color: rgba(255, 255, 255, 0.2); /* Memberikan warna latar belakang tanpa transparansi pada konten */
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.column p {
+    padding-left:100px ;
+    padding-right: 100px;
+}
+.bg{
+    background-image: url('/static/AssetsMSIB/cover.jpg');
+    background-size: cover;
+    background-position: 0%;
+    opacity: 1;
+}
+.kepsek{
+  bottom: 0;
+  position: relative;
+  color: #fff; /* Warna teks */
+  text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,
+               -1px 1px 0 #000,
+                1px 1px 0 #000; /
+}
+
+.informasi{
+    background-color: #b7cef9;
+   
+}
+.position{
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.kegiatan{
+  background-color: #9fbaed;
+}
+
+.container-utama{
+  font-family: 'calibri';
+}
+
+.nav-link.active {
+    font-size: 1.1em;/* Warna teks yang sesuai */
+}
+
+.container-contact{
+  background-color: #b9cdf1;
+}
+.card{
+  background-color: #c8dafb;
+}
+
+.form{
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.form-group input{
+  width: 170%;
+  position: relative;
+  box-shadow: #000;
+}
+/* Untuk tampilan ponsel (lebar layar kurang dari 768px, sesuaikan sesuai kebutuhan Anda) */
+@media (max-width: 767px) {
+  .form-group input {
+    width: 100%; /* Atur lebar menjadi 100% untuk membuatnya responsif */
+    box-sizing: border-box; /* Menangani padding dan border agar tidak melebar */
+    box-shadow: none; /* Hapus bayangan (jika tidak diperlukan) */
+    /* Tambahan gaya atau pengaturan lain sesuai kebutuhan untuk tampilan ponsel */
+  }
+}
+
+.form-group label{
+  margin-right: 20;
+}
+
+.form-check-label.custom-label {
+  width: 40px; /* Sesuaikan lebar sesuai kebutuhan */
+  white-space: nowrap; /* Agar teks tidak pindah ke baris baru */ 
+}
+
+.mt-5 {
+  margin-top: 40px; /* Sesuaikan nilai margin-top sesuai kebutuhan Anda */
+}
+
+.daftar button{
+  width: 20%;
+}
+
+  /* Untuk tampilan umum */
+  .form-group input,
+  .form-group select,
+  .form-check-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  .form-group.col-md-6 {
+    margin-bottom: 10px;
+  }
+
+  /* Untuk tampilan ponsel (lebar layar kurang dari 768px, sesuaikan sesuai kebutuhan Anda) */
+  @media (max-width: 767px) {
+    .form-group.col-md-6 {
+      margin-left: 0;
+    }
+
+    .form-group.offset-md-1 {
+      margin-left: 0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-check-input {
+      margin-bottom: 10px;
+    }
+
+    .form-group.col-md-6 {
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      margin-bottom: 20px;
+    }
+  }
+
+  .container-contact {
+    margin-top: 60px;
+  }
+
+  .informasi {
+    padding: 20px;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .position {
+    align-items: center;
+  }
+
+  .ml-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .fa-brands {
+    margin: 0 5px;
+    font-size: 24px;
+  }
+
+  h5 {
+    margin-top: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    border: 0;
+  }
+
+  /* Media query untuk tampilan ponsel (lebar layar kurang dari 768px) */
+  @media (max-width: 767px) {
+    .d-flex {
+      flex-direction: column;
+    }
+
+    .position {
+      text-align: center;
+    }
+
+    .ml-center {
+      margin: 0;
+    }
+
+    .fa-brands {
+      margin: 5px 0;
+    }
+
+    iframe {
+      height: 200px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    }
+  }
+
+  .sambutan {
+    padding: 20px;
+  }
+
+  .bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 48%; /* Atur lebar kolom untuk tampilan desktop */
+    margin-bottom: 20px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Pusatkan gambar */
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Media query untuk tampilan ponsel (lebar layar kurang dari 768px) */
+  @media (max-width: 767px) {
+    .column {
+      width: 100%; /* Atur lebar kolom menjadi 100% untuk tampilan ponsel */
+    }
+  }
+  
+  /* status pendaftaran */
+  
+  .modal-confirm {
+    color: #636363;
+    width: 325px;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.modal-confirm .form-control,
+.modal-confirm .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.modal-confirm .icon-box {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #82ce34;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal-confirm .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+.modal-confirm.modal-dialog {
+    margin-top: 80px;
+}
+
+.modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+    background: #6fb32b;
+    outline: none;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+.box-putih {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px; /* Ganti sesuai kebutuhan padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Tambahkan shadow */
+  display: inline-block; /* Agar box berukuran sesuai dengan isinya */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+/* CSS untuk perangkat seluler */
+@media only screen and (max-width: 600px) {
+  .box-putih {
+      padding: 10px; /* Atur padding lebih kecil untuk perangkat seluler */
+      margin-top: 60px; /* Atur margin lebih kecil untuk perangkat seluler */
+  }
+}
+
+.kontak_kami{
+  background-color: white;
+  border-radius: 20px;
+  padding: 80px; /* Ganti sesuai kebutuhan padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Tambahkan shadow */
+  display: inline-block; /* Agar box berukuran sesuai dengan isinya */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 70%;
+  width: 70%;
+}
+.text-center {
+  text-align: center;
+}
+/* KONTAK KAMI */
+.kontak_kami {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%; /* Menyesuaikan lebar dengan lebar layar */
+}
+.d-flex {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .kontak_kami {
+      width: 60%; /* Menyesuaikan lebar dengan lebar layar pada perangkat seluler */
+      margin: 30px auto;
+  }
+
+  .d-flex {
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+  .d-flex div {
+      flex-basis: 30%; /* Menyesuaikan lebar setiap kolom */
+  }
+}

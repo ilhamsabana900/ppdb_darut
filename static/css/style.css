@@ -1,0 +1,20 @@
+.smp {
+    font-size: medium;
+    margin: 1rem;
+}
+
+#carouselExampleCaptions {
+    max-width: 1500px; 
+    margin: auto; 
+}
+
+.carousel-inner img {
+    max-height: 700px; 
+    object-fit: cover; 
+}
+
+.sub-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
